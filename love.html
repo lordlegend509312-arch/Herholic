@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For You 💌</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Dancing+Script&display=swap" rel="stylesheet">
+
+<style>
+
+body{
+    margin:0;
+    padding:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:'Dancing Script',cursive;
+    overflow:hidden;
+
+    background-color:#ffd6e7;
+    background-image:
+        radial-gradient(circle at 20% 20%, #ffffff 6px, transparent 7px),
+        radial-gradient(circle at 80% 30%, #ffffff 6px, transparent 7px),
+        radial-gradient(circle at 40% 70%, #ffffff 6px, transparent 7px),
+        radial-gradient(circle at 70% 80%, #ffffff 6px, transparent 7px),
+        radial-gradient(circle at 50% 40%, #ff8fb1 8px, transparent 9px),
+        radial-gradient(circle at 10% 60%, #ff8fb1 8px, transparent 9px);
+    background-size:150px 150px;
+}
+
+/* Letter */
+.letter{
+    background:rgba(255,255,255,0.95);
+    padding:40px;
+    width:90%;
+    max-width:500px;
+    border-radius:25px;
+    box-shadow:0 15px 40px rgba(255,105,180,0.4);
+    text-align:center;
+    animation:fadeIn 1.5s ease;
+}
+
+@keyframes fadeIn{
+    from{opacity:0; transform:scale(0.9);}
+    to{opacity:1; transform:scale(1);}
+}
+
+h1{
+    font-family:'Great Vibes',cursive;
+    font-size:42px;
+    color:#ff4da6;
+    margin-bottom:20px;
+}
+
+p{
+    font-size:18px;
+    color:#444;
+    line-height:1.6;
+    white-space:pre-line; /* preserve line breaks */
+}
+
+.signature{
+    margin-top:30px;
+    font-size:22px;
+    color:#ff4da6;
+}
+
+/* Navigation Buttons */
+.nav-buttons{
+    position:fixed;
+    bottom:20px;
+    width:100%;
+    display:flex;
+    justify-content:space-between;
+    padding:0 30px;
+}
+
+.nav-buttons button{
+    padding:10px 20px;
+    border:none;
+    border-radius:20px;
+    background:#ff4da6;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+    transition:0.3s;
+}
+
+.nav-buttons button:hover{
+    transform:scale(1.08);
+}
+
+/* Floating hearts */
+.heart{
+    position:fixed;
+    font-size:18px;
+    animation:floatUp 6s linear forwards;
+}
+
+@keyframes floatUp{
+    from{transform:translateY(0); opacity:1;}
+    to{transform:translateY(-110vh); opacity:0;}
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="letter">
+    <h1>To My Special Person 💖</h1>
+
+    <p>
+From the moment you came into my life,
+everything started feeling a little more beautiful.
+Your smile makes my worst days better,
+and your voice feels like home. I can’t find peace without you. Just thinking about you makes me smile, and your eyes, your nose, your hair—I imagine them all the time, and I can’t get over how perfect you are.
+I don’t know what the future holds,
+but I know one thing for sure—
+I want you in it.
+You are my happiness, my peace,
+and my favorite notification. When I look at you, it feels like the world stops and music plays in the background. You’re so dreamy, so beautiful… I just want to cherish and worship every part of you.
+    </p>
+
+    <div class="signature">
+        Forever Yours 💌
+    </div>
+</div>
+
+<!-- Navigation -->
+<div class="nav-buttons">
+    <button onclick="window.location.href='yesorno.html'">⬅ Previous</button>
+    <button onclick="window.location.href='love2.html'">Next ➜</button>
+</div>
+
+<script>
+
+/* Floating hearts */
+setInterval(()=>{
+  const heart=document.createElement("div");
+  heart.className="heart";
+  heart.innerHTML="💗";
+  heart.style.left=Math.random()*window.innerWidth+"px";
+  heart.style.bottom="-20px";
+  document.body.appendChild(heart);
+  setTimeout(()=>heart.remove(),6000);
+},1200);
+
+</script>
+
+</body>
+</html>
